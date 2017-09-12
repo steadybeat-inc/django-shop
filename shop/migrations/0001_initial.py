@@ -15,8 +15,8 @@ class Migration(migrations.Migration):
         dependencies.append(('email_auth', '0001_initial'))
         customer_bases = ('email_auth.user',)
     else:
-        dependencies.append(('auth', '0001_initial'))
-        customer_bases = ('auth.user',)
+        dependencies.append(('core', '0001_initial'))
+        customer_bases = ('core.siteuser',)
 
     operations = [
         migrations.CreateModel(
